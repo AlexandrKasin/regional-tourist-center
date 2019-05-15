@@ -23,12 +23,34 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": [],
             "es5BrowserSupport": true
           },
           "configurations": {
+            "en": {
+              "aot": true,
+              "i18nFile": "src/translate/messages.en.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "en",
+              "i18nMissingTranslation": "error"
+            },
+            "pl": {
+              "aot": true,
+              "i18nFile": "src/translate/messages.pl.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "pl",
+              "i18nMissingTranslation": "error"
+            },
+            "ru": {
+              "aot": true,
+              "i18nFile": "src/translate/messages.ru.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "ru",
+              "i18nMissingTranslation": "error"
+            },
             "production": {
               "fileReplacements": [
                 {
@@ -63,6 +85,15 @@
           "configurations": {
             "production": {
               "browserTarget": "regional-tourist-center:build:production"
+            },
+            "en": {
+              "browserTarget": "regional-tourist-center:build:en"
+            },
+            "pl": {
+              "browserTarget": "regional-tourist-center:build:pl"
+            },
+            "ru": {
+              "browserTarget": "regional-tourist-center:build:ru"
             }
           }
         },

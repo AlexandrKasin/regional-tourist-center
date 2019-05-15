@@ -1,0 +1,17 @@
+.app-container-active {
+  transition: 0.5s;
+  transform: translateX(300px);
+  filter:  brightness(70%);
+  -webkit-filter: brightness(70%);
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    padding-top: 80px;
+    transition: 0.5s;
+  }
+
+  .body{
+    overflow-x: hidden;
+  }
+}

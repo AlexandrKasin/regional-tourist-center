@@ -1,0 +1,50 @@
+<div class="mobile-menu-container" [ngClass]="{'menu-active':menuBehaviorService.menuIsOpen.getValue()}">
+  <a class="menu-container__btn-open" (click)="btnClick()">
+    <span class="btn-open__item" [ngClass]="{'menu-active__item':menuBehaviorService.menuIsOpen.getValue()}"></span>
+  </a>
+  <div class="m-3 mt-4 border-bottom">
+    <div class="d-flex align-items-center position-relative">
+      <div class="menu-user-img d-flex justify-content-center align-items-center mb-4">
+        <span class="menu-user-img__label">a</span>
+      </div>
+      <h6 class="menu-username">Alexandr Kasin</h6>
+      <span class="ml-2">alexandr.kasin@gmail.com</span>
+    </div>
+    <ul class="sub-menu pl-0">
+      <li class="sub-menu__item">Log in</li>
+      <li class="sub-menu__item">Create account</li>
+    </ul>
+  </div>
+  <div class="m-3 mt-4 border-bottom">
+    <ul class="sub-menu pl-0">
+      <li class="sub-menu__item">
+        <i class="far fa-compass"></i>
+        <span class="pl-2">Tours</span>
+      </li>
+      <li class="sub-menu__item">
+        <i class="fas fa-globe-europe"></i>
+        <span class="pl-2">Countries & Documents</span>
+      </li>
+      <li class="sub-menu__item">
+        <i class="far fa-id-card"></i>
+        <span class="pl-2">Visa Free</span>
+       </li>
+      <li class="sub-menu__item">
+        <i class="far fa-newspaper"></i>
+        <span class="pl-2">News</span>
+      </li>
+    </ul>
+  </div>
+  <div class="m-3 mt-4 border-bottom">
+    <ul class="sub-menu pl-0">
+      <li class="sub-menu__item">Support</li>
+      <li class="sub-menu__item">Partners</li>
+      <li class="sub-menu__item">About Us</li>
+    </ul>
+  </div>
+  <div class="m-3 mt-4">
+    <ul class="sub-menu pl-0">
+      <li class="sub-menu__item">Log out</li>
+    </ul>
+  </div>
+</div>

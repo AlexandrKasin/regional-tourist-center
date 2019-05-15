@@ -1,0 +1,42 @@
+.register-container {
+  background-color: #fafafa;
+  height: 100%;
+}
+
+.register-container__title {
+  color: #4b5a5a;
+}
+
+.register-container__title_green {
+  color: #649b32;
+}
+
+.register-container__button {
+  padding: 15px 25px;
+  color: white;
+  background-color: #649b32;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 6px;
+  outline: none !important;
+}
+
+.register-container__text {
+  font-size: 14px;
+  color: #556464;
+}
+
+.register-container__title_small {
+  font-weight: normal;
+}
+
+.register-container__checkbox {
+  height: 15px;
+  width: 15px;
+  cursor: pointer;
+}
+
+.register-container__text_pointer{
+  cursor: pointer;
+}

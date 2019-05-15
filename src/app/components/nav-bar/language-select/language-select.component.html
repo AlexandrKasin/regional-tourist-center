@@ -1,0 +1,16 @@
+<div class="h-100">
+  <div [ngClass]="{'flag-select-open':selectIsOpen}" class="d-flex align-items-center nav-bar-item__flag h-100"
+       (click)="onClickFlag()">
+    <img src="{{currentLanguage.icon}}" alt="image"/>
+  </div>
+  <div *ngIf="selectIsOpen" class="position-absolute flag-select">
+    <div *ngFor="let item of countries">
+      <div
+        class="d-flex justify-content-start align-items-center p-2 pb-0 flag-select__item"
+        (click)="onSelectLanguage(item)">
+        <img src="{{item.icon}}" class="flag-select__icon" alt="{{item.name}}"/>
+        <span class="ml-2 text-dark flag-select__title">{{item.name}}</span>
+      </div>
+    </div>
+  </div>
+</div>

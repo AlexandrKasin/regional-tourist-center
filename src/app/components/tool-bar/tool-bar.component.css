@@ -1,0 +1,66 @@
+.menu {
+  background-color: white;
+  height: 80px;
+  width: 100%;
+  border-bottom: 1px solid black;
+}
+
+.menu-item {
+
+}
+
+.menu-item__title {
+  color: #9ea5a5;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-decoration: none !important;
+  font-weight: 500;
+  font-size: 17px;
+}
+
+.contact {
+  margin-left: 60px;
+}
+
+.contact__phone {
+  color: #649b32;
+  cursor: pointer;
+}
+
+.contact__phone:hover {
+  color: #57862b;
+}
+
+.contact__open-hours-label {
+  font-weight: 700;
+  color: #9ea5a5;
+}
+
+.contact__open-hours-time {
+  color: #649b32;
+  font-weight: 700;
+  padding-left: 10px;
+}
+
+.logo {
+  cursor: pointer;
+  height: 53px;
+  width: 65px;
+}
+
+.menu-item__link:hover {
+  color: #315fb6;
+}
+
+@media (max-width: 768px) {
+  .tool-bar-items-container {
+    display: none !important;
+  }
+
+  .menu {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+  }
+}

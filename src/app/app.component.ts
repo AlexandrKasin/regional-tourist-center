@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {MobileMenuBehaviorService} from './services/mobile-menu-service/mobile-menu-behavior.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'regional-tourist-center';
+
+  constructor(private menuBehaviorService: MobileMenuBehaviorService) {
+
+  }
 }

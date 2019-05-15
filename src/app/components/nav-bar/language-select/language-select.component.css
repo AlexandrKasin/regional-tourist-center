@@ -1,0 +1,42 @@
+.flag-select {
+  top: 40px;
+  right: 116px;
+  height: 138px;
+  width: 150px;
+  background-color: #9eadad;
+}
+
+.flag-select :before {
+
+}
+
+.flag-select__icon {
+  height: 30px;
+}
+
+.flag-select__title {
+  font-size: 14px;
+  color: #556464;
+  font-weight: 500;
+}
+
+.flag-select__item:hover {
+  background-color: #789090;
+  cursor: pointer;
+}
+
+.nav-bar-item__flag {
+  width: 62px;
+  padding-left: 15px;
+  padding-right: 15px;
+  cursor: pointer;
+}
+
+.nav-bar-item__flag:hover {
+
+}
+
+.flag-select-open {
+
+}
+

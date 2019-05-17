@@ -9,6 +9,12 @@ import {MobileMenuBehaviorService} from '../../../services/mobile-menu-service/m
 export class MobileMenuComponent implements OnInit {
 
   constructor(private menuBehaviorService: MobileMenuBehaviorService) {
+    window.onresize = (e) => {
+      const mobileScreenSize = 768;
+      if (window.innerWidth > mobileScreenSize) {
+        this.menuBehaviorService.updatedDataSelection(false);
+      }
+    };
   }
 
   ngOnInit() {

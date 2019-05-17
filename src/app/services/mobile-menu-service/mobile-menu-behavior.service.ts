@@ -8,7 +8,7 @@ export class MobileMenuBehaviorService {
   menuIsOpen: BehaviorSubject<boolean>;
 
   constructor() {
-    this.menuIsOpen = new BehaviorSubject<boolean>(true);
+    this.menuIsOpen = new BehaviorSubject<boolean>(false);
   }
 
   updatedDataSelection(data: boolean) {

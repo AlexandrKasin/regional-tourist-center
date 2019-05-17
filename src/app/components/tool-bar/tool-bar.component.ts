@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {MobileMenuBehaviorService} from '../../services/mobile-menu-service/mobile-menu-behavior.service';
 
 @Component({
   selector: 'app-tool-bar',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ToolBarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private menuBehaviorService: MobileMenuBehaviorService) { }
 
   ngOnInit() {
   }

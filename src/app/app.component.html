@@ -1,11 +1,11 @@
 <div class="body">
+  <header>
+    <app-nav-bar></app-nav-bar>
+    <app-tool-bar></app-tool-bar>
+    <app-mobile-menu></app-mobile-menu>
+  </header>
   <div class="app-container" [ngClass]="{'app-container-active':menuBehaviorService.menuIsOpen.getValue()}">
-    <header>
-      <app-nav-bar></app-nav-bar>
-      <app-tool-bar></app-tool-bar>
-    </header>
     <router-outlet></router-outlet>
   </div>
-  <app-mobile-menu></app-mobile-menu>
 </div>
 

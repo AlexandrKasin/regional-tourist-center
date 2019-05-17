@@ -13,8 +13,10 @@ import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {RegisterService} from './services/register-service/register.service';
 import {AuthService} from './services/auth-service/auth.service';
-import { MobileMenuComponent } from './components/nav-bar/mobile-menu/mobile-menu.component';
-
+import {MobileMenuComponent} from './components/nav-bar/mobile-menu/mobile-menu.component';
+import {StoreModule} from '@ngrx/store';
+import {authReducer} from './ngrx/reducers/auth.reducer';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
@@ -40,7 +42,9 @@ const appRoutes: Routes = [
     RouterModule.forRoot(
       appRoutes
     ),
-    FormsModule
+    FormsModule,
+    StoreModule.forRoot({authParams: authReducer}),
+    StoreDevtoolsModule.instrument()
   ],
   providers: [RegisterService, AuthService],
   bootstrap: [AppComponent]

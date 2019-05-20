@@ -1,0 +1,30 @@
+.select-body {
+  list-style: none;
+  position: absolute;
+  display: none;
+  z-index: 10;
+  background-color: white;
+  padding-left: 0;
+  border: 1px solid #4b5a5a;
+}
+
+
+.select-body_active {
+  display: block;
+}
+
+.select-item:hover{
+  cursor: pointer;
+  background-color: #9c9c9c;
+  color: white;
+}
+
+.select-btn {
+  padding: 5px 15px;
+  background-color: white;
+  border: 1px solid #cbcece;
+  font-size: 16px;
+  font-weight: 500;
+  color: #4b5a5a;
+  outline: none !important;
+}

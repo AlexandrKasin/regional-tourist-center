@@ -1,0 +1,35 @@
+.card-container{
+  width: 80%;
+  flex-direction: column;
+}
+
+.card-container-title{
+  color: #4b5a5a;
+}
+
+.card-filters-container{
+  width: 300px;
+  border-right: 1px solid #ebebeb;
+  border-left: 1px solid #ebebeb;
+}
+
+.card-page-info{
+  height: 80px;
+  width: 100%;
+}
+
+@media (min-width: 1200px){
+  .page-container {
+    max-width: 1300px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .card-filters-container{
+    display: none;
+  }
+
+  .card-container{
+    width: 100%;
+  }
+}

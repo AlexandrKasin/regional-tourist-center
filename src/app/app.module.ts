@@ -16,11 +16,17 @@ import {AuthService} from './services/auth-service/auth.service';
 import {MobileMenuComponent} from './components/nav-bar/mobile-menu/mobile-menu.component';
 import {StoreModule} from '@ngrx/store';
 import {authReducer} from './ngrx/reducers/auth.reducer';
-import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import {StoreDevtoolsModule} from '@ngrx/store-devtools';
+import {ToursPageComponent} from './components/tours-page/tours-page.component';
+import {TourCardComponent} from './components/tour-card/tour-card.component';
+import {SelectComponent} from './base-components/select/select.component';
+import {NgxEditorModule} from 'ngx-editor';
+import {TooltipModule} from 'ngx-bootstrap/tooltip';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'register', component: RegisterComponent},
+  {path: 'tours', component: ToursPageComponent},
   {path: '**', component: PageNotFoundComponent}
 ];
 
@@ -35,6 +41,9 @@ const appRoutes: Routes = [
     LoginPopupComponent,
     RegisterComponent,
     MobileMenuComponent,
+    ToursPageComponent,
+    TourCardComponent,
+    SelectComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +53,9 @@ const appRoutes: Routes = [
     ),
     FormsModule,
     StoreModule.forRoot({authParams: authReducer}),
-    StoreDevtoolsModule.instrument()
+    StoreDevtoolsModule.instrument(),
+    TooltipModule.forRoot(),
+    NgxEditorModule
   ],
   providers: [RegisterService, AuthService],
   bootstrap: [AppComponent]

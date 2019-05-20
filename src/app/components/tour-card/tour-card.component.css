@@ -1,0 +1,32 @@
+.tour-card-title {
+  color: #649b32;
+}
+
+.tour-card-text {
+  color: #4b5a5a;
+}
+
+.tour-card-subtitle {
+  color: #4b5a5a;
+  font-weight: 500;
+}
+
+.tour-card {
+  max-width: 18rem;
+  min-width: 265px;
+}
+
+.tour-card-btn {
+  background-color: white;
+  border: 1px solid #649b32;
+  color: #649b32;
+  border-radius: 4px;
+  transition: 0.6s ease;
+}
+
+.tour-card-btn:hover {
+  background-color: #649b32;
+  border: 1px solid #649b32;
+  color: white;
+  transition: 0.6s ease;
+}

@@ -1,0 +1,15 @@
+<div class="position-relative">
+  <button type="button" class="select-btn d-flex align-items-center" (click)="this.isOpen = !this.isOpen">
+    <span class="mr-3">{{name}}</span>
+    <div>
+      <i class="fas fa-caret-up d-block"></i>
+      <i class="fas fa-caret-down d-block"></i>
+    </div>
+  </button>
+  <ul class="select-body" [ngClass]="{'select-body_active':isOpen}">
+    <li class="select-item">Sort: Popularity</li>
+    <li class="select-item">Sort: Price low to high</li>
+    <li class="select-item">Sort: Duration short to long</li>
+    <li class="select-item">Sort: Duration long to short</li>
+  </ul>
+</div>

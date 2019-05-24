@@ -1,0 +1,8 @@
+<div class="d-flex align-items-center">
+  <div (click)="onClick()" class="checkbox cursor-pointer">
+    <div *ngIf="isActive" class="d-flex justify-content-center align-items-center">
+      <i class="fas fa-check"></i>
+    </div>
+  </div>
+  <span class="ml-2 h6 font-weight-normal pt-2">{{label}}</span>
+</div>

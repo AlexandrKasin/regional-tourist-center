@@ -1,0 +1,23 @@
+.page-selector__button {
+  padding: 6px 12px;
+  z-index: 3;
+  background-color: white;
+  color: #649b32;
+  border: 1px solid #dfdfdf;
+  font-weight: 500;
+  font-size: 18px;
+  margin: 2px;
+  text-transform: capitalize;
+}
+
+.page-selector__button:hover {
+  color: #556464;
+  background-color: #f8f8f8;
+}
+
+.page-selector__button_active {
+  color: #556464;
+  background-color: #f8f8f8;
+  cursor: default;
+}
+

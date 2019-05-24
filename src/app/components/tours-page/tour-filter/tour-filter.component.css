@@ -1,0 +1,30 @@
+.filter__title {
+  font-weight: 500;
+  font-size: 20px;
+  color: #4b5a5a;
+}
+
+.filter__subtitle {
+  color: #649b32;
+}
+
+.filter__subtitle_pointer {
+  cursor: pointer;
+}
+
+.filter-container {
+  flex-direction: column;
+}
+
+.filter-container__input{
+  width: 100%;
+}
+
+.filter-container__input_range{
+  text-align: center;
+  width: 75px;
+  height: 46px;
+  font-size: 16px;
+  color: #556464;
+  border: 1px solid #cbcece;
+}

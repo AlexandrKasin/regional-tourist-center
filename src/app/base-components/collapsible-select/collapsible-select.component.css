@@ -1,0 +1,35 @@
+.collapsible-select {
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.collapsible-select__title {
+  color: #4b5a5a;
+  font-weight: 500;
+}
+
+.collapsible-select__icon {
+  font-size: 13px;
+  color: #0db9f0;
+  transition: 0.3s;
+}
+
+.collapsible-select__icon_active {
+  transform: rotate(45deg);
+  transition: 0.3s;
+}
+
+.collapsible-select_active {
+  display: none;
+}
+
+.collapsible-select-items {
+
+}
+
+.collapsible-select-items_active {
+
+  transition: 0.5s;
+}

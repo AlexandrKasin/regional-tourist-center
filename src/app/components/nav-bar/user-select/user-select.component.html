@@ -1,0 +1,11 @@
+<div (click)="selectClick()" *ngIf="loginBehaviorService.isUserLoggedIn.getValue()"
+     class="user-select d-flex align-items-center h-100">
+  <i class="far fa-user user-select__logo"></i>
+  <span class="user-select__username ml-2">sasha___1943@mail.ru</span>
+  <i class="fas fa-sort-down user-select__arrow ml-1 mb-1"></i>
+  <ul *ngIf="isOpen" class="user-select-menu">
+    <li class="select-menu__item w-100">Profile</li>
+    <li (click)="authService.logout()" class="d-flex align-items-end h-100"><span class="select-menu__item w-100">Log out</span>
+    </li>
+  </ul>
+</div>

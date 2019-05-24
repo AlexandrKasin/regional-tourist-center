@@ -10,7 +10,7 @@ export class LoginBehaviorService {
 
   constructor() {
     const initialValue = sessionStorage.getItem('isUserLoggedIn');
-    this.isUserLoggedIn = new BehaviorSubject<boolean>(Boolean(initialValue));
+    this.isUserLoggedIn = new BehaviorSubject<boolean>(initialValue === 'true');
   }
 
   updatedDataSelection(data: boolean) {

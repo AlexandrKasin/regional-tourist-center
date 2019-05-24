@@ -18,10 +18,17 @@ import {StoreModule} from '@ngrx/store';
 import {authReducer} from './ngrx/reducers/auth.reducer';
 import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 import {ToursPageComponent} from './components/tours-page/tours-page.component';
-import {TourCardComponent} from './components/tour-card/tour-card.component';
+import {TourCardComponent} from './components/tours-page/tour-card/tour-card.component';
 import {SelectComponent} from './base-components/select/select.component';
 import {NgxEditorModule} from 'ngx-editor';
 import {TooltipModule} from 'ngx-bootstrap/tooltip';
+import {UserSelectComponent} from './components/nav-bar/user-select/user-select.component';
+import {TourFilterComponent} from './components/tours-page/tour-filter/tour-filter.component';
+import {Ng5SliderModule} from 'ng5-slider';
+import {NgxDaterangepickerMd} from 'ngx-daterangepicker-material';
+import { CollapsibleSelectComponent } from './base-components/collapsible-select/collapsible-select.component';
+import { CheckboxComponent } from './base-components/checkbox/checkbox.component';
+import { PageSelectorComponent } from './components/page-selector/page-selector.component';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
@@ -43,7 +50,12 @@ const appRoutes: Routes = [
     MobileMenuComponent,
     ToursPageComponent,
     TourCardComponent,
-    SelectComponent
+    SelectComponent,
+    UserSelectComponent,
+    TourFilterComponent,
+    CollapsibleSelectComponent,
+    CheckboxComponent,
+    PageSelectorComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +67,9 @@ const appRoutes: Routes = [
     StoreModule.forRoot({authParams: authReducer}),
     StoreDevtoolsModule.instrument(),
     TooltipModule.forRoot(),
-    NgxEditorModule
+    NgxEditorModule,
+    Ng5SliderModule,
+    NgxDaterangepickerMd.forRoot()
   ],
   providers: [RegisterService, AuthService],
   bootstrap: [AppComponent]

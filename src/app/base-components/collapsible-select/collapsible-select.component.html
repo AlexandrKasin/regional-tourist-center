@@ -1,0 +1,16 @@
+<div class="collapsible-select">
+  <div class="d-flex justify-content-between align-items-center cursor-pointer" (click)="onClickSelect()">
+    <span class="collapsible-select__title">Type of tour</span>
+    <div [ngClass]="{'collapsible-select__icon_active':isOpen}" class="collapsible-select__icon">
+      <span class="fas fa-plus"></span>
+    </div>
+  </div>
+
+  <div [ngClass]="{'collapsible-select_active collapsible-select-items_active':!isOpen}"
+       class="collapsible-select-items">
+    <app-checkbox label="Culture"></app-checkbox>
+    <app-checkbox label="Culture"></app-checkbox>
+    <app-checkbox label="Culture"></app-checkbox>
+  </div>
+
+</div>

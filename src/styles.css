@@ -1,4 +1,12 @@
-body{
+body {
   width: 100%;
   min-width: 320px;
+}
+
+.ng5-slider .ng5-slider-pointer {
+  outline: none !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }

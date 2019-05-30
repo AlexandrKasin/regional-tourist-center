@@ -1,0 +1,49 @@
+.create-tour-page {
+  background-color: #1fc8db;
+  background-image: linear-gradient(141deg, #a0ffa6 0%, #1fc8db 51%, #2cb5e8 75%);
+  height: 90vh;
+}
+
+.create-tour-container {
+  width: 50%;
+  background-color: white;
+  border-radius: 6px;
+}
+
+.create-tour-container__btn-menu {
+  height: 50px;
+  padding: 5px 40px;
+  font-weight: 500;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  color: #a8afaf;
+  font-size: 16px;
+}
+
+.create-tour-container__btn-menu:hover {
+  border-bottom: 2px solid #0db9f0;
+}
+
+.menu-container {
+  border-bottom: 1px solid #cbd2d2;
+}
+
+.menu-footer {
+
+}
+
+.menu-footer__btn-continue {
+  font-weight: 500;
+  color: white;
+  padding: 5px 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: #0db9f0;
+}
+
+.dot-circle {
+  color: #cbd2d2;
+  font-size: 12px;
+  margin: 5px;
+}

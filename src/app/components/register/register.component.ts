@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {RegisterService} from '../../services/register-service/register.service';
-import {LoginBehaviorService} from '../../services/login-behavior-servis/login-behavior.service';
 
 
 @Component({
@@ -11,8 +10,8 @@ import {LoginBehaviorService} from '../../services/login-behavior-servis/login-b
 export class RegisterComponent implements OnInit {
 
   registerForm = {
-    firstName: '',
-    lastName: '',
+    name: '',
+    surname: '',
     email: '',
     password: '',
     retypePassword: ''

@@ -12,26 +12,20 @@ export class TourService {
   }
 
   createTour() {
-    const formdata = objectToFormData();
-
-    const datesPrices = [
-      {
-        startDate: 'asdad',
-        language: {
-          name: 'asd'
+    const tour = {
+      amountDays: 10,
+      tourDescription: [{
+        title: 'Hello',
+        language: {languageName: 'english'}
+      },
+        {
+          title: 'Hesdgfdsfgllo',
+          language: {languageName: 'englishsdfg'}
         }
-      }
-    ];
-    const nameOfArray = Object.keys({datesPrices})[0];
-    datesPrices.forEach((data, index) => {
-      // tslint:disable-next-line:forin
-      for (const key in data) {
-        debugger
-        formdata.append(nameOfArray + '[][' + index + '][' + key + ']', data[key]);
-      }
-    });
-    console.log(formdata.get('datesPrices'));
-    this.http.post(SERVER + '/create/tour', formdata).subscribe(a => {
+      ]
+    };
+    const formData = objectToFormData(tour, {indices: true});
+    this.http.post(SERVER + '/create/tour', formData).subscribe(a => {
     });
   }
 }

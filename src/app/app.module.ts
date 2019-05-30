@@ -26,14 +26,16 @@ import {UserSelectComponent} from './components/nav-bar/user-select/user-select.
 import {TourFilterComponent} from './components/tours-page/tour-filter/tour-filter.component';
 import {Ng5SliderModule} from 'ng5-slider';
 import {NgxDaterangepickerMd} from 'ngx-daterangepicker-material';
-import { CollapsibleSelectComponent } from './base-components/collapsible-select/collapsible-select.component';
-import { CheckboxComponent } from './base-components/checkbox/checkbox.component';
-import { PageSelectorComponent } from './components/page-selector/page-selector.component';
+import {CollapsibleSelectComponent} from './base-components/collapsible-select/collapsible-select.component';
+import {CheckboxComponent} from './base-components/checkbox/checkbox.component';
+import {PageSelectorComponent} from './components/page-selector/page-selector.component';
+import {CreateTourPageComponent} from './components/create-tour-page/create-tour-page.component';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'tours', component: ToursPageComponent},
+  {path: 'create/tour', component: CreateTourPageComponent},
   {path: '**', component: PageNotFoundComponent}
 ];
 
@@ -55,7 +57,8 @@ const appRoutes: Routes = [
     TourFilterComponent,
     CollapsibleSelectComponent,
     CheckboxComponent,
-    PageSelectorComponent
+    PageSelectorComponent,
+    CreateTourPageComponent
   ],
   imports: [
     BrowserModule,

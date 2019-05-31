@@ -1,17 +1,44 @@
 <div class="d-flex justify-content-center w-100 create-tour-page">
-  <div class="create-tour-container mt-5">
+  <div class="create-tour-container mt-5 mb-5">
     <div class="d-flex justify-content-center align-items-center mt-3">
       <div class="d-flex justify-content-center menu-container">
-        <button class="create-tour-container__btn-menu" type="button">1. Overview</button>
-        <button class="create-tour-container__btn-menu" type="button">2. Itinerary</button>
-        <button class="create-tour-container__btn-menu" type="button">3. Dates&Prices</button>
+        <button [ngClass]="{'create-tour-container__btn-menu_active':numberPage === 1}"
+                class="create-tour-container__btn-menu" type="button" (click)="onChangePage(1)">1. Overview
+        </button>
+        <button [ngClass]="{'create-tour-container__btn-menu_active':numberPage === 2}"
+                class="create-tour-container__btn-menu" type="button" (click)="onChangePage(2)">2. Images
+        </button>
+        <button [ngClass]="{'create-tour-container__btn-menu_active':numberPage === 3}"
+                class="create-tour-container__btn-menu" type="button" (click)="onChangePage(3)">3. Itinerary
+        </button>
+        <button [ngClass]="{'create-tour-container__btn-menu_active':numberPage === 4}"
+                class="create-tour-container__btn-menu" type="button" (click)="onChangePage(4)">4. Dates&Prices
+        </button>
       </div>
     </div>
-    <div class="menu-footer d-flex justify-content-end align-items-center mt-5">
+    <div class="d-flex justify-content-center mt-5">
+      <div class="overview-container">
+        <div class="mt-3">
+          <div *ngIf="numberPage === 1">
+            <app-form-input class="w-100" label="Title"></app-form-input>
+            <label class="d-block form-label">Description</label>
+            <app-ngx-editor [placeholder]="'Describe tour here...'" [spellcheck]="true"
+                            [(ngModel)]="htmlContent"></app-ngx-editor>
+          </div>
+
+          <div class="mt-4" *ngIf="numberPage === 2">
+            <label class="d-block form-label">Images</label>
+            <app-form-image-editor></app-form-image-editor>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="menu-footer d-flex justify-content-end align-items-center mt-5 mb-5">
       <div class="d-flex justify-content-center w-100 pl-5 ml-5">
-        <i class="fas fa-dot-circle dot-circle"></i>
-        <i class="fas fa-dot-circle dot-circle"></i>
-        <i class="fas fa-dot-circle dot-circle"></i>
+        <div [ngClass]="{'dot_isActive':numberPage === 1}"><i class="fas fa-dot-circle dot-circle"></i></div>
+        <div [ngClass]="{'dot_isActive':numberPage === 2}"><i class="fas fa-dot-circle dot-circle"></i></div>
+        <div [ngClass]="{'dot_isActive':numberPage === 3}"><i class="fas fa-dot-circle dot-circle"></i></div>
+        <div [ngClass]="{'dot_isActive':numberPage === 4}"><i class="fas fa-dot-circle dot-circle"></i></div>
       </div>
       <button class="mr-3 menu-footer__btn-continue" type="button">Continue</button>
     </div>

@@ -30,6 +30,8 @@ import {CollapsibleSelectComponent} from './base-components/collapsible-select/c
 import {CheckboxComponent} from './base-components/checkbox/checkbox.component';
 import {PageSelectorComponent} from './components/page-selector/page-selector.component';
 import {CreateTourPageComponent} from './components/create-tour-page/create-tour-page.component';
+import { FormInputComponent } from './components/create-tour-page/form-input/form-input.component';
+import { FormImageEditorComponent } from './components/create-tour-page/form-image-editor/form-image-editor.component';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
@@ -58,7 +60,9 @@ const appRoutes: Routes = [
     CollapsibleSelectComponent,
     CheckboxComponent,
     PageSelectorComponent,
-    CreateTourPageComponent
+    CreateTourPageComponent,
+    FormInputComponent,
+    FormImageEditorComponent
   ],
   imports: [
     BrowserModule,

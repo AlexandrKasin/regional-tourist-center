@@ -67,7 +67,7 @@
 .login-popup__button {
   padding: 5px 20px;
   color: white;
-  background-color: #649b32;
+  background-color: #27bde3;
   border: none;
   font-size: 14px;
   font-weight: 500;
@@ -82,7 +82,7 @@
 }
 
 .login-popup__link:hover {
-  color: #649b32;
+  color: #27bde3;
 }
 
 .login-popup__close {
@@ -95,5 +95,5 @@
 }
 
 .login-popup__close:hover {
-  color: #649b32;
+  color: #27bde3;
 }

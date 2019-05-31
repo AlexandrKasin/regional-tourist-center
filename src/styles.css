@@ -10,3 +10,7 @@ body {
 .cursor-pointer {
   cursor: pointer;
 }
+
+.ngx-editor-textarea{
+  height: 200px!important;
+}

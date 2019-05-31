@@ -1,13 +1,14 @@
 .create-tour-page {
-  background-color: #1fc8db;
-  background-image: linear-gradient(141deg, #a0ffa6 0%, #1fc8db 51%, #2cb5e8 75%);
-  height: 90vh;
+  background-color: #f2f2f2;
+  background-image: linear-gradient(141deg, rgba(135, 224, 141, 0.58) 0%, #1fc8db 51%, rgba(44, 181, 232, 0.58) 75%);
+  height: 150vh;
 }
 
 .create-tour-container {
   width: 50%;
   background-color: white;
   border-radius: 6px;
+  height: 70vh;
 }
 
 .create-tour-container__btn-menu {
@@ -23,6 +24,14 @@
 
 .create-tour-container__btn-menu:hover {
   border-bottom: 2px solid #0db9f0;
+}
+
+.create-tour-container__btn-menu_active {
+  border-bottom: 2px solid #0db9f0;
+}
+
+.dot_isActive > .dot-circle {
+  color: #0db9f0 !important;
 }
 
 .menu-container {
@@ -47,3 +56,8 @@
   font-size: 12px;
   margin: 5px;
 }
+
+.overview-container {
+  width: 70%;
+}
+

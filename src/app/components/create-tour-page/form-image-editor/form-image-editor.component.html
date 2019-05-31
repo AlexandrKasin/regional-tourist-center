@@ -1,0 +1,11 @@
+<div>
+  <div (click)="input.click()" class="image-editor d-flex justify-content-center align-items-center">
+    <input (change)="onFileSelected($event)" multiple class="image-editor__input" type="file"
+           accept="image/*" #input>
+    <i class="far fa-images image-editor__icon"></i>
+  </div>
+  <div class="d-flex flex-wrap align-items-center w-100">
+    <img class="preview__img" *ngFor="let image of urlImage" [src]="image">
+  </div>
+</div>
+

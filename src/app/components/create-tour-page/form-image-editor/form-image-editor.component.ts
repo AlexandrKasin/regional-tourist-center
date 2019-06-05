@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-form-image-editor',
@@ -9,6 +9,9 @@ export class FormImageEditorComponent implements OnInit {
 
   constructor() {
   }
+
+  @Input() inputFormImages = [];
+  @Output() changed = new EventEmitter<any>();
 
   inputImages = [];
   urlImage = [];
@@ -25,7 +28,6 @@ export class FormImageEditorComponent implements OnInit {
     const images = Object.keys(event.target.files).map((key) => {
       return event.target.files[key];
     });
-    console.log(event.target.files);
     images.map((img) => {
       const isExistsImage = this.inputImages.map(el => el.name).indexOf(img.name);
       if (isExistsImage === -1) {
@@ -33,9 +35,16 @@ export class FormImageEditorComponent implements OnInit {
         this.getImgUrl(img);
       }
     });
+    this.changed.emit(this.inputImages);
   }
 
   ngOnInit() {
+    const images = Object.keys(this.inputFormImages).map((key) => {
+      return this.inputFormImages[key];
+    });
+    images.map((img) => {
+      this.getImgUrl(img);
+    });
   }
 
 }

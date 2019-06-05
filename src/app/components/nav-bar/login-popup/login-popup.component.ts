@@ -3,7 +3,6 @@ import {AuthService} from '../../../services/auth-service/auth.service';
 import {LoginBehaviorService} from '../../../services/login-behavior-servis/login-behavior.service';
 import {Router} from '@angular/router';
 import {Token} from '../../../models/token';
-import {TourService} from '../../../services/tour-service/tour.service';
 
 
 @Component({
@@ -13,10 +12,8 @@ import {TourService} from '../../../services/tour-service/tour.service';
 })
 export class LoginPopupComponent implements OnInit {
 
-  constructor(private authService: AuthService, private loginBehaviorService: LoginBehaviorService,
-              private router: Router, private tourService: TourService) {
+  constructor(private authService: AuthService, private loginBehaviorService: LoginBehaviorService, private router: Router) {
     this.isVisible = loginBehaviorService.isUserLoggedIn.getValue();
-    tourService.createTour();
   }
 
   token: any;

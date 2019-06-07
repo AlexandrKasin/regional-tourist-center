@@ -12,8 +12,8 @@ export class CreateTourPageComponent implements OnInit {
   }
 
   createTourForm = new FormGroup({
-    title: new FormControl('', Validators.required && Validators.minLength(10) && Validators.maxLength(100)),
-    description: new FormControl('', Validators.required && Validators.minLength(100) && Validators.maxLength(4000)),
+    title: new FormControl(''),
+    description: new FormControl('', [Validators.required, Validators.minLength(100), Validators.maxLength(4000)]),
     inputFormImages: new FormControl('')
   });
 
@@ -28,7 +28,7 @@ export class CreateTourPageComponent implements OnInit {
   }
 
   submit() {
-    console.log(this.htmlContent);
+    console.log(this.createTourForm.get('title').valid);
   }
 
   onChangePage(page) {

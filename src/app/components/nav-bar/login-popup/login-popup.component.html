@@ -1,5 +1,5 @@
 <form (ngSubmit)="submit()" *ngIf="!isVisible">
-  <button i18n="@@signIn" (click)="open()" type="button" class="nav-bar-item__button text-uppercase">sign in</button>
+  <button i18n="@@signIn" (click)="open()" type="button" class="nav-bar-item__button text-uppercase">Войти</button>
   <div *ngIf="isOpen" class="position-absolute login-popup">
     <div (click)="close()"><i class="fas fa-times login-popup__close"></i></div>
     <i class="fas fa-chevron-up login-popup__arrow-up position-absolute"></i>
@@ -23,10 +23,10 @@
         <div class="d-flex justify-content-between">
           <div class="mb-3 login-popup__link">
             <i class="fas fa-unlock-alt"></i>
-            <span class="ml-2">Forgot password?</span>
+            <span class="ml-2">Забыли пароль?</span>
           </div>
           <div class="d-flex justify-content-end">
-            <button i18n="@@signIn" class="login-popup__button text-uppercase">sign in</button>
+            <button i18n="@@signIn" class="login-popup__button text-uppercase">Войти</button>
           </div>
         </div>
       </div>

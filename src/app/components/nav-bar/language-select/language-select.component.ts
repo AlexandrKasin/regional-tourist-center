@@ -23,7 +23,7 @@ export class LanguageSelectComponent implements OnInit {
     {icon: FlagRussia, shortCountryName: 'ru-RU', name: 'Russia'},
     {icon: FlagPoland, shortCountryName: 'pl-PL', name: 'Poland'},
   ];
-  currentLanguage = this.countries[0];
+  currentLanguage = this.countries[1];
 
   ngOnInit() {
   }

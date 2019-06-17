@@ -1,0 +1,17 @@
+@media (min-width: 1200px) {
+  .container-countries {
+    max-width: 960px;
+  }
+}
+
+.country-card-title {
+  height: 30px;
+}
+
+.country-card-title:hover {
+  border-color: #4b5a5a !important;
+}
+
+.letter_first{
+  border: none!important;
+}

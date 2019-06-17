@@ -32,12 +32,15 @@ import {PageSelectorComponent} from './components/page-selector/page-selector.co
 import {CreateTourPageComponent} from './components/create-tour-page/create-tour-page.component';
 import {FormInputComponent} from './components/create-tour-page/form-input/form-input.component';
 import {FormImageEditorComponent} from './components/create-tour-page/form-image-editor/form-image-editor.component';
+import {CountriesPageComponent} from './components/countries-page/countries-page.component';
+import {ScrollToModule} from 'ng2-scroll-to-el';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'tours', component: ToursPageComponent},
   {path: 'create/tour', component: CreateTourPageComponent},
+  {path: 'countries', component: CountriesPageComponent},
   {path: '**', component: PageNotFoundComponent}
 ];
 
@@ -62,7 +65,8 @@ const appRoutes: Routes = [
     PageSelectorComponent,
     CreateTourPageComponent,
     FormInputComponent,
-    FormImageEditorComponent
+    FormImageEditorComponent,
+    CountriesPageComponent
   ],
   imports: [
     BrowserModule,
@@ -70,6 +74,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(
       appRoutes
     ),
+    ScrollToModule.forRoot(),
     FormsModule,
     StoreModule.forRoot({authParams: authReducer}),
     StoreDevtoolsModule.instrument(),

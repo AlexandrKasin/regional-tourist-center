@@ -1,7 +1,7 @@
 <div class="nav-bar-container d-flex justify-content-end">
   <app-language-select></app-language-select>
   <div *ngIf="!loginBehaviorService.isUserLoggedIn.getValue()" class="d-flex align-items-center mr-3">
-    <button routerLink="/register" class="nav-bar-item__button text-uppercase mr-2 nav-bar-item__button_light">sign up</button>
+    <button routerLink="/register" class="nav-bar-item__button text-uppercase mr-2 nav-bar-item__button_light">Регистрация</button>
     <div>
       <app-login-popup></app-login-popup>
     </div>

@@ -4,29 +4,45 @@
   </div>
   <div class="d-flex justify-content-center card-container ml-2">
     <div class="d-flex align-items-center card-page-info border-bottom">
-      <h4 class="card-container-title ml-3 w-100">Result
-        <small class="font-weight-normal">Displaying 1 - 5 of 5</small>
+      <h4 class="card-container-title ml-3 w-100">Результат
+        <small class="font-weight-normal">Отображения 1 - 5 of 5</small>
       </h4>
       <div class="d-flex justify-content-end w-100">
-        <app-select class="mr-3" [name]="'Display: 10'"></app-select>
-        <app-select [name]="'Sort: Popularity'"></app-select>
+        <app-select class="mr-3" [name]="'Отображать: 10'"></app-select>
+        <app-select [name]="'Сортировать: цена по убыванию'"></app-select>
       </div>
     </div>
     <div class="d-flex flex-wrap w-100">
       <div class="m-3">
-        <app-tour-card></app-tour-card>
+        <app-tour-card [amountDays]="10" [price]="100" [title]="'Luna Sharm Hotel 3'" [img]="'https://tophotels.ru/icache/user_photos/195/5938872_740x550.jpg'"
+                       description="Отель Luna Sharm Hotel расположен в 27 км от международного аэропорта Шарм-Эль-Шейха. До автобусной остановки - 3 км.
+                       Расположение между пустыней и Красным морем делает отель идеальным местом для дайвинга и для изучения красивейших пейзажей
+                        Синайской пустыни."
+                       [type]="'Культура'"></app-tour-card>
       </div>
       <div class="m-3">
-        <app-tour-card></app-tour-card>
+        <app-tour-card [amountDays]="10" [price]="300" [title]="'All Seasons Badawia Resort'" [img]="'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkwFHsqgvafSdIPJ-ADpaYp5W8JOEJJxbT0VI0V9YvETGGRTdv'"
+                       description="В районе Hadaba, в бухте Ras Om Sid, в 20 км от аэропорта Шарм Эль Шейха, в 6 км от центра Naama Bay и в 2 км от города Шарм Эль Шейх."
+                       [type]="'Культура'"></app-tour-card>
       </div>
       <div class="m-3">
-        <app-tour-card></app-tour-card>
+        <app-tour-card [amountDays]="10" [price]="170" [title]="'Tivoli Hotel Aqua Park 4'" [img]="'https://washington-org.s3.amazonaws.com/s3fs-public/tours_sightseeing_category_hero_shot.jpg'"
+                       description="Tivoli расположен в районе Хадаба, на 2-й линии от моря в 18 км от аэропорта Шарм Эль Шейха.Отель состоит из двухэтажных зданий.Последнее обновление отеля 2016 г.Количество номеров:В отеле 114 номеров.Номера стандарт и улушеные номера"
+                       [type]="'Культура'"></app-tour-card>
       </div>
       <div class="m-3">
-        <app-tour-card></app-tour-card>
+        <app-tour-card [amountDays]="10" [price]="200" [title]="'Luna Sharm Hotel 3'" [img]="'https://tophotels.ru/icache/user_photos/195/5938872_740x550.jpg'"
+                       description="Отель Luna Sharm Hotel расположен в 27 км от международного аэропорта Шарм-Эль-Шейха. До автобусной остановки - 3 км.
+                       Расположение между пустыней и Красным морем делает отель идеальным местом для дайвинга и для изучения красивейших пейзажей
+                        Синайской пустыни."
+                       [type]="'Культура'"></app-tour-card>
       </div>
       <div class="m-3">
-        <app-tour-card></app-tour-card>
+        <app-tour-card [amountDays]="10" [price]="150" [title]="'Luna Sharm Hotel 3'" [img]="'https://tophotels.ru/icache/user_photos/195/5938872_740x550.jpg'"
+                       description="Отель Luna Sharm Hotel расположен в 27 км от международного аэропорта Шарм-Эль-Шейха. До автобусной остановки - 3 км.
+                       Расположение между пустыней и Красным морем делает отель идеальным местом для дайвинга и для изучения красивейших пейзажей
+                        Синайской пустыни."
+                       [type]="'Культура'"></app-tour-card>
       </div>
     </div>
     <app-page-selector class="m-3"></app-page-selector>

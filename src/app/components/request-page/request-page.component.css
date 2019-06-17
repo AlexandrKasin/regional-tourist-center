@@ -1,0 +1,67 @@
+@media (min-width: 1200px) {
+  .container-request {
+    max-width: 960px;
+  }
+}
+
+.container-request {
+}
+
+.request-menu__item {
+  list-style: none !important;
+  padding: 10px;
+  border: 1px solid #404040;
+  cursor: pointer;
+  border-bottom: none;
+  color: #404040;
+  font-weight: bold;
+}
+
+.request-menu__item:hover {
+  background-color: #404040;
+  color: white;
+}
+
+.request-menu__item_active {
+  background-color: #404040;
+  color: white;
+}
+
+.form-container {
+  border: 1px solid #4b5a5a;
+}
+
+.form-container-box {
+  margin: 30px;
+  width: 800px;
+}
+
+.request-user__image {
+  width: 200px;
+  cursor: pointer;
+}
+
+.fa-folder-plus {
+  color: #4b5a5a;
+  font-size: 40px;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+}
+
+.container-request__btn {
+  font-weight: 500;
+  color: white;
+  padding: 5px 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: #0db9f0;
+}
+
+
+.request__title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #556464;
+}

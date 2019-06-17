@@ -1,11 +1,11 @@
 <div class="d-flex justify-content-center filter-container m-3">
   <div class="d-flex justify-content-between w-100">
-    <h5 class="filter__title">Filters</h5>
-    <span class="filter__subtitle filter__subtitle_pointer">Clear all</span>
+    <h5 class="filter__title">Фильтры</h5>
+    <span class="filter__subtitle filter__subtitle_pointer">Очистить все</span>
   </div>
 
   <div class="mt-3">
-    <h6 class="filter__title">Duration in Days</h6>
+    <h6 class="filter__title">Продолжительность дней</h6>
     <div class="d-flex position-relative justify-content-between">
       <input class="filter-container__input filter-container__input_range" type="text" [(ngModel)]="minValue"/>
       <input class="filter-container__input filter-container__input_range" type="text" [(ngModel)]="maxValue"/>
@@ -14,7 +14,7 @@
   </div>
 
   <div class="filter__title mt-3">
-    <h6>Departs between</h6>
+    <h6>Даты начала/окончания</h6>
     <input type="text" ngxDaterangepickerMd [(ngModel)]="selectedDateRange" class="form-control text-center"/>
   </div>
 

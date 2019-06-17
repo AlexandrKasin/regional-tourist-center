@@ -1,6 +1,6 @@
 <div class="collapsible-select">
   <div class="d-flex justify-content-between align-items-center cursor-pointer" (click)="onClickSelect()">
-    <span class="collapsible-select__title">Type of tour</span>
+    <span class="collapsible-select__title">Тип тура</span>
     <div [ngClass]="{'collapsible-select__icon_active':isOpen}" class="collapsible-select__icon">
       <span class="fas fa-plus"></span>
     </div>
@@ -8,9 +8,11 @@
 
   <div [ngClass]="{'collapsible-select_active collapsible-select-items_active':!isOpen}"
        class="collapsible-select-items">
-    <app-checkbox label="Culture"></app-checkbox>
-    <app-checkbox label="Culture"></app-checkbox>
-    <app-checkbox label="Culture"></app-checkbox>
+    <app-checkbox label="Локальный"></app-checkbox>
+    <app-checkbox label="Выездной"></app-checkbox>
+    <app-checkbox label="Спортивный"></app-checkbox>
+    <app-checkbox label="Культура"></app-checkbox>
+    <app-checkbox label="Религиозный"></app-checkbox>
   </div>
 
 </div>

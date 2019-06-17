@@ -1,9 +1,15 @@
 .tour-card-title {
   color: #649b32;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .tour-card-text {
   color: #4b5a5a;
+  height: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .tour-card-subtitle {
@@ -29,4 +35,8 @@
   border: 1px solid #649b32;
   color: white;
   transition: 0.6s ease;
+}
+
+.card-img-top{
+  height: 200px;
 }

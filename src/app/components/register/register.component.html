@@ -1,23 +1,23 @@
 <form class="register-container" (ngSubmit)="onSubmit()">
   <div class="container pt-5">
-    <h2 class="register-container__title">Create your
-      <span class="register-container__title_green">free </span>
-      <span class="">account</span></h2>
+    <h2 class="register-container__title">Создать свой
+      <span class="register-container__title_green">бесплатный </span>
+      <span class="">аккаутн</span></h2>
   </div>
   <div class="container register-form d-flex mb-5">
     <div class="w-100">
       <div class="mt-5">
         <div class="d-flex pb-4">
           <div class="position-relative w-100">
-            <input class="d-block login-popup__input mb-4" placeholder="First name" [(ngModel)]="registerForm.firstName"
+            <input class="d-block login-popup__input mb-4" placeholder="Имя" [(ngModel)]="registerForm.firstName"
                    name="firstName" autofocus/>
             <div class="position-absolute input-placeholder">
               <i class="fas fa-user input-placeholder__icon"></i>
             </div>
           </div>
           <div class="position-relative w-100">
-            <input class="d-block login-popup__input mb-4" [(ngModel)]="registerForm.lastName" name="lastName"
-                   placeholder="Last name"/>
+            <input class="d-block login-popup__input mb-4" [(ngModel)]="registerForm.lastName" name="Last name"
+                   placeholder="Фамилия"/>
             <div class="position-absolute input-placeholder">
             </div>
           </div>
@@ -31,7 +31,7 @@
         </div>
         <div class="position-relative pb-4">
           <input class="d-block login-popup__input mb-3" [(ngModel)]="registerForm.password" name="password"
-                 placeholder="Password"
+                 placeholder="Пароль"
                  type="password" autocomplete=""/>
           <div class="position-absolute input-placeholder">
             <i class="fas fa-lock input-placeholder__icon"></i>
@@ -39,40 +39,39 @@
         </div>
         <div class="position-relative pb-4">
           <input class="d-block login-popup__input mb-3" [(ngModel)]="registerForm.retypePassword" name="retypePassword"
-                 placeholder="Retype password" type="password" autocomplete=""/>
+                 placeholder="Повторить пароль" type="password" autocomplete=""/>
           <div class="position-absolute input-placeholder">
             <i class="fas fa-lock input-placeholder__icon"></i>
           </div>
         </div>
         <div class="mb-5 mt-3 d-flex align-items-center">
           <input type="checkbox" class="register-container__checkbox">
-          <span class="pl-2 register-container__text">I agree with the Regional Tourist Center
-            <span class="register-container__title_green register-container__text_pointer">Terms of Service</span>
+          <span class="pl-2 register-container__text">Я согласен с Regional Tourist Center
+            <span class="register-container__title_green register-container__text_pointer">Правилами использования</span>
           </span>
         </div>
         <div class="d-flex justify-content-end">
-          <button class="register-container__button" type="submit">Create Account</button>
+          <button class="register-container__button" type="submit">Создать аккаунт</button>
         </div>
       </div>
     </div>
     <div class="register-hints w-100 ml-5 mt-4">
       <div class="p-2">
-        <h6 class="register-container__title_small">Your password is your master encryption key.</h6>
-        <p class="register-container__text">Your account’s security depends on the strength of your password. Passwords
-          that are too short, too simple or
-          consist of dictionary words are easily guessed.</p>
+        <h6 class="register-container__title_small">Ваш пароль - ваш главный ключ шифрования.</h6>
+        <p class="register-container__text">Безопасность вашей учетной записи зависит от надежности вашего пароля.
+          Пароли которые слишком короткие, слишком простые или состоят из словарных слов, легко угадываются.</p>
       </div>
       <div class="p-2">
-        <h6 class="register-container__title_small">Existing email address.</h6>
-        <p class="register-container__text">All e-mails from the site will be sent to this
-          address. The e-mail address will not be published and will be used only at your request: for password recovery
-          or for receiving news and e-mail notifications. </p>
+        <h6 class="register-container__title_small">Существующий адрес электронной почты</h6>
+        <p class="register-container__text">Все письма с сайта будут отправлены на этот
+          адрес. Адрес электронной почты не будет опубликован и будет использоваться только по вашему запросу: для
+          восстановления пароля
+          или для получения новостей и уведомлений по электронной почте.</p>
       </div>
       <div class="p-2">
-        <h6 class="register-container__title_small">Your account is only as secure as your computer.</h6>
-        <p class="register-container__text">Never enter your password on a device that you do not fully trust. Do not
-          log into your account from a shared
-          or public computer. </p>
+        <h6 class="register-container__title_small">Ваша учетная запись защищена только так, как ваш компьютер.</h6>
+        <p class="register-container__text">Никогда не вводите свой пароль на устройстве, которому вы не полностью
+          доверяете. Не делайте войти в свой аккаунт из общего или общедоступный компьютер.</p>
       </div>
     </div>
   </div>

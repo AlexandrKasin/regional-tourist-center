@@ -1,0 +1,44 @@
+<div class="container container-request d-flex justify-content-center">
+  <div class="w-100">
+    <div class="d-flex justify-content-end w-100">
+      <ul class="d-flex align-items-center request-menu mb-0 mt-4">
+        <li [ngClass]="{'request-menu__item_active':true}" class="request-menu__item">Страхование</li>
+        <li [ngClass]="{'request-menu__item_active':false}" class="request-menu__item">Карта студента</li>
+        <li [ngClass]="{'request-menu__item_active':false}" class="request-menu__item">Карта преподавателя</li>
+      </ul>
+    </div>
+
+    <div class="w-100 form-container d-flex justify-content-between">
+      <div>
+        <div class="position-relative">
+          <img class="request-user__image border"
+               src="http://chittagongit.com/images/person-image-icon/person-image-icon-6.jpg">
+          <i class="fas fa-folder-plus"></i>
+        </div>
+        <div class="position-relative mt-5">
+          <img class="request-user__image border"
+               src="assets/img/passport.png">
+          <i class="fas fa-folder-plus"></i>
+        </div>
+      </div>
+      <div class="form-container-box">
+        <div class="m-2 w-100 d-flex justify-content-end">
+          <app-select name="Тип страхования"></app-select>
+        </div>
+        <app-form-input class="w-100" label="Имя"></app-form-input>
+        <app-form-input class="w-100" label="Фамилия"></app-form-input>
+        <app-form-input class="w-100" label="Отчество"></app-form-input>
+        <app-form-input class="w-100" label="Email"></app-form-input>
+        <app-form-input class="w-100" label="Номер телефона"></app-form-input>
+
+        <div class="filter__title mt-3">
+          <h6 class="request__title">Даты начала/окончания страховки</h6>
+          <input type="text" ngxDaterangepickerMd [(ngModel)]="selectedDateRange" class="form-control text-center"/>
+        </div>
+        <div class="w-100 d-flex justify-content-end mt-3">
+          <button class="container-request__btn">Отправить</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

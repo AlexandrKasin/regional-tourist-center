@@ -34,6 +34,8 @@ import {FormInputComponent} from './components/create-tour-page/form-input/form-
 import {FormImageEditorComponent} from './components/create-tour-page/form-image-editor/form-image-editor.component';
 import {CountriesPageComponent} from './components/countries-page/countries-page.component';
 import {ScrollToModule} from 'ng2-scroll-to-el';
+import { RequestPageComponent } from './components/request-page/request-page.component';
+import {Ng2TelInputModule} from 'ng2-tel-input';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
@@ -41,6 +43,7 @@ const appRoutes: Routes = [
   {path: 'tours', component: ToursPageComponent},
   {path: 'create/tour', component: CreateTourPageComponent},
   {path: 'countries', component: CountriesPageComponent},
+  {path: 'request', component: RequestPageComponent},
   {path: '**', component: PageNotFoundComponent}
 ];
 
@@ -66,7 +69,8 @@ const appRoutes: Routes = [
     CreateTourPageComponent,
     FormInputComponent,
     FormImageEditorComponent,
-    CountriesPageComponent
+    CountriesPageComponent,
+    RequestPageComponent
   ],
   imports: [
     BrowserModule,
@@ -82,7 +86,8 @@ const appRoutes: Routes = [
     NgxEditorModule,
     Ng5SliderModule,
     NgxDaterangepickerMd.forRoot(),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    Ng2TelInputModule
   ],
   providers: [RegisterService, AuthService],
   bootstrap: [AppComponent]

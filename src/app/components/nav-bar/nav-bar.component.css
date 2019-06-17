@@ -70,3 +70,17 @@
     display: none!important;
   }
 }
+
+.nav-bar__menu{
+  border-right: 1px solid #9ea5a5; padding-left: 5px;
+  color: #bcc1c1;
+  padding-right: 5px;
+}
+
+.nav-bar__menu:hover{
+  color: white;
+}
+
+.nav-bar__menu_first{
+  border-left: 1px solid #9ea5a5;
+}

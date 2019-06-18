@@ -34,8 +34,11 @@ import {FormInputComponent} from './components/create-tour-page/form-input/form-
 import {FormImageEditorComponent} from './components/create-tour-page/form-image-editor/form-image-editor.component';
 import {CountriesPageComponent} from './components/countries-page/countries-page.component';
 import {ScrollToModule} from 'ng2-scroll-to-el';
-import { RequestPageComponent } from './components/request-page/request-page.component';
+import {RequestPageComponent} from './components/request-page/request-page.component';
 import {Ng2TelInputModule} from 'ng2-tel-input';
+import {DestinationCountryComponent} from './components/countries-page/destination-country/destination-country.component';
+import {TourBaseComponent} from './components/tour-base/tour-base.component';
+import { SliderComponent } from './components/slider/slider.component';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
@@ -44,6 +47,8 @@ const appRoutes: Routes = [
   {path: 'create/tour', component: CreateTourPageComponent},
   {path: 'countries', component: CountriesPageComponent},
   {path: 'request', component: RequestPageComponent},
+  {path: 'destination/country', component: DestinationCountryComponent},
+  {path: 'pogorany', component: TourBaseComponent},
   {path: '**', component: PageNotFoundComponent}
 ];
 
@@ -70,7 +75,10 @@ const appRoutes: Routes = [
     FormInputComponent,
     FormImageEditorComponent,
     CountriesPageComponent,
-    RequestPageComponent
+    RequestPageComponent,
+    DestinationCountryComponent,
+    TourBaseComponent,
+    SliderComponent
   ],
   imports: [
     BrowserModule,

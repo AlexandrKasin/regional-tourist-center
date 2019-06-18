@@ -1,0 +1,49 @@
+.base-tour-container{
+
+}
+
+@media (min-width: 1200px){
+  .base-tour-container{
+    max-width: 900px;
+  }
+}
+
+.base-tour-price{
+  background: #1a2940;
+  color: #fff;
+  height: 190px;
+}
+
+.btn-request{
+  color: #fff;
+  background-color: #57bfcf;
+  font-weight: 500;
+  border: none;
+  padding: 10px 20px;
+}
+
+.price{
+  font-size: 18px;
+  font-weight: 500;
+  color: #7eb835;
+}
+
+.price-box{
+  border-right: 1px solid #4b5a5a;
+  padding: 10px;
+}
+
+.destination__title {
+  background-color: #EEE;
+  border-bottom: 2px solid #a51e22;
+  padding: 5px 15px;
+  margin-top: 30px;
+}
+
+.tour-base__list{
+  border-right: 1px solid #4b5a5a;
+  height: 100%;
+  padding-top: 20px;
+  padding-left: 15px;
+  width: 200px;
+}

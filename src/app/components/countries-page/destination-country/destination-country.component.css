@@ -1,0 +1,17 @@
+.destination__title {
+  background-color: #EEE;
+  border-bottom: 2px solid #a51e22;
+  padding: 5px 15px;
+  margin: 30px 0 15px;
+}
+
+@media (min-width: 1200px) {
+  .container-destination {
+    max-width: 960px;
+  }
+}
+
+.destination__icon{
+  color: #a51e22;
+  font-size: 35px;
+}

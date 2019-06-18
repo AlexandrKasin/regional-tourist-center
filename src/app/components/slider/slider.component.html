@@ -1,0 +1,9 @@
+<div class="position-relative">
+  <div (click)="onClickLeft()" class="slider__btn-left slider__btn d-flex align-items-center justify-content-center">
+    <i class="fas fa-chevron-left slider__btn_icon"></i>
+  </div>
+  <div (click)="onClickRight()" class="slider__btn-right slider__btn d-flex align-items-center justify-content-center">
+    <i class="fas fa-chevron-right slider__btn_icon"></i>
+  </div>
+  <img class="slider__img" [src]="images[numberImg]">
+</div>

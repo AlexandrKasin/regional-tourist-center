@@ -36,7 +36,7 @@
       <tbody class="w-100">
       <tr *ngFor="let country of countries;">
         <th>
-          <h6 class="cursor-pointer text-danger country-card-title" [id]="country.name.charAt(0)">{{country.name}}</h6>
+          <h6 routerLink="/destination/country" class="cursor-pointer text-danger country-card-title" [id]="country.name.charAt(0)">{{country.name}}</h6>
         </th>
         <th>
           <ul>

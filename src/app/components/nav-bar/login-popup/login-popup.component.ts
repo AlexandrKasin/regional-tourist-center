@@ -37,7 +37,7 @@ export class LoginPopupComponent implements OnInit {
       this.loginBehaviorService.updatedDataSelection(true);
       this.isVisible = this.loginBehaviorService.isUserLoggedIn.getValue();
       sessionStorage.setItem('token', response.accessToken);
-      this.router.navigate(['/']);
+      this.router.navigate(['/tours']);
     });
   }
 

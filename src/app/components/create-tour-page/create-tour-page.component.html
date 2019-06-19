@@ -3,16 +3,16 @@
     <div class="d-flex justify-content-center align-items-center mt-3">
       <div class="d-flex justify-content-center menu-container">
         <button [ngClass]="{'create-tour-container__btn-menu_active':numberPage === 1}"
-                class="create-tour-container__btn-menu" type="button" (click)="onChangePage(1)">1. Overview
+                class="create-tour-container__btn-menu" type="button" (click)="onChangePage(1)">1. Описание
         </button>
         <button [ngClass]="{'create-tour-container__btn-menu_active':numberPage === 2}"
-                class="create-tour-container__btn-menu" type="button" (click)="onChangePage(2)">2. Images
+                class="create-tour-container__btn-menu" type="button" (click)="onChangePage(2)">2. Фото
         </button>
         <button [ngClass]="{'create-tour-container__btn-menu_active':numberPage === 3}"
-                class="create-tour-container__btn-menu" type="button" (click)="onChangePage(3)">3. Itinerary
+                class="create-tour-container__btn-menu" type="button" (click)="onChangePage(3)">3. Маршрут
         </button>
         <button [ngClass]="{'create-tour-container__btn-menu_active':numberPage === 4}"
-                class="create-tour-container__btn-menu" type="button" (click)="onChangePage(4)">4. Dates&Prices
+                class="create-tour-container__btn-menu" type="button" (click)="onChangePage(4)">4. Цены & даты
         </button>
       </div>
     </div>
@@ -20,17 +20,55 @@
       <div class="overview-container">
         <div class="mt-3">
           <div *ngIf="numberPage === 1">
-            <app-form-input (changed)="onChangeTitle($event)" class="w-100" label="Title"></app-form-input>
-            <label class="d-block form-label">Description</label>
-            <app-ngx-editor (ngModelChange)="onChangeDescription($event)" [placeholder]="'Describe tour here...'"
+            <app-form-input (changed)="onChangeTitle($event)" class="w-100" label="Название тура"></app-form-input>
+            <label class="d-block form-label">Описание</label>
+            <app-ngx-editor (ngModelChange)="onChangeDescription($event)" [placeholder]="'Опишите тур здесь...'"
                             [spellcheck]="true"
                             [(ngModel)]="htmlContent"></app-ngx-editor>
           </div>
 
           <div class="mt-4" *ngIf="numberPage === 2">
-            <label class="d-block form-label">Images</label>
+            <label class="d-block form-label">Добавление фотографий</label>
             <app-form-image-editor [inputFormImages]="createTourForm.get('inputFormImages').value"
                                    (changed)="changeImageEditor($event)"></app-form-image-editor>
+          </div>
+
+          <div class="mt-2" *ngIf="numberPage === 3">
+            <label class="d-block form-label">Добавление Маршрута</label>
+            <div class="border p-5">
+              <app-form-input (changed)="onChangeTourTitle($event)" class="w-100"
+                              label="Название пункта"></app-form-input>
+              <label class="d-block form-label">Описание</label>
+              <app-ngx-editor [placeholder]="'Опишите пункт здесь...'"
+                              [spellcheck]="true"
+                              [(ngModel)]="htmlContent"
+                              (ngModelChange)="changeDescItinerary($event)"></app-ngx-editor>
+              <div class="d-flex justify-content-end mt-3">
+                <button class="mr-3 menu-footer__btn-continue" type="button" (click)="addItinerary()">Добавить</button>
+              </div>
+            </div>
+            <table class="table mt-3 mb-5">
+              <thead>
+              <tr>
+                <th>День</th>
+                <th class="pl-4">Название пункта</th>
+                <th class="pl-4">Описание</th>
+              </tr>
+              </thead>
+              <tbody class="w-100">
+              <tr *ngFor="let item of tourItinerary;">
+                <th>
+                  <h6>{{item.numberOfDay}}</h6>
+                </th>
+                <th>
+                  <h6>{{item.title}}</h6>
+                </th>
+                <th>
+                  <p class="cursor-pointer text-danger country-card-title">{{item.description}}</p>
+                </th>
+              </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
@@ -42,7 +80,7 @@
         <div [ngClass]="{'dot_isActive':numberPage === 3}"><i class="fas fa-dot-circle dot-circle"></i></div>
         <div [ngClass]="{'dot_isActive':numberPage === 4}"><i class="fas fa-dot-circle dot-circle"></i></div>
       </div>
-      <button class="mr-3 menu-footer__btn-continue" (click)="submit()" type="button">Continue</button>
+      <button class="mr-3 menu-footer__btn-continue" (click)="submit()" type="button">Продолжить</button>
     </div>
   </div>
 </div>

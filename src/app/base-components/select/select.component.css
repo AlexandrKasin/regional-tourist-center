@@ -5,7 +5,10 @@
   background-color: white;
   padding-left: 0;
   border: 1px solid #4b5a5a;
+  width: 100%;
+  z-index: 2;
 }
+
 
 
 .select-body_active {
@@ -26,4 +29,5 @@
   font-weight: 500;
   color: #4b5a5a;
   outline: none !important;
+  width: 200px;
 }

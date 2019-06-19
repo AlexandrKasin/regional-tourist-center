@@ -2,10 +2,10 @@
   <div class="w-100">
     <div class="d-flex justify-content-end w-100">
       <ul class="d-flex align-items-center request-menu mb-0 mt-4">
-        <li [ngClass]="{'request-menu__item_active':true}" class="request-menu__item">Страхование</li>
-        <li [ngClass]="{'request-menu__item_active':false}" class="request-menu__item">Карта студента</li>
-        <li [ngClass]="{'request-menu__item_active':false}" class="request-menu__item">Карта преподавателя</li>
-        <li [ngClass]="{'request-menu__item_active':false}" class="request-menu__item">Visa Free</li>
+        <li [ngClass]="{'request-menu__item_active':type ===1}" (click)="changeType(1)" class="request-menu__item">Страхование</li>
+        <li [ngClass]="{'request-menu__item_active':type ===2}" (click)="changeType(2)" class="request-menu__item">Карта студента</li>
+        <li [ngClass]="{'request-menu__item_active':type ===3}" (click)="changeType(3)" class="request-menu__item">Карта преподавателя</li>
+        <li [ngClass]="{'request-menu__item_active':type ===4}" (click)="changeType(4)" class="request-menu__item">Visa Free</li>
       </ul>
     </div>
 
@@ -23,7 +23,7 @@
         </div>
       </div>
       <div class="form-container-box">
-        <div class="m-2 w-100 d-flex justify-content-end">
+        <div class="m-2 w-100 d-flex justify-content-end" *ngIf="type === 1">
           <app-select name="Тип страхования"></app-select>
         </div>
         <app-form-input class="w-100" label="Имя"></app-form-input>
@@ -32,7 +32,7 @@
         <app-form-input class="w-100" label="Email"></app-form-input>
         <app-form-input class="w-100" label="Номер телефона"></app-form-input>
 
-        <div class="filter__title mt-3">
+        <div class="filter__title mt-3" *ngIf="type === 1">
           <h6 class="request__title">Даты начала/окончания страховки</h6>
           <input type="text" ngxDaterangepickerMd [(ngModel)]="selectedDateRange" class="form-control text-center"/>
         </div>

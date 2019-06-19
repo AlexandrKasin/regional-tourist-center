@@ -20,8 +20,34 @@ export class CreateTourPageComponent implements OnInit {
     inputFormImages: new FormControl('')
   });
 
-  numberPage = 1;
+  numberPage = 3;
   htmlContent = '';
+
+  tourItinerary = [];
+
+  itinerary = {
+    numberOfDay: 0,
+    title: '',
+    description: '',
+  };
+
+  onChangeTourTitle(event) {
+    this.itinerary.title = event;
+  }
+
+  changeDescItinerary(event) {
+    this.itinerary.description = event;
+  }
+
+  addItinerary() {
+    this.itinerary.numberOfDay++;
+    const tempItinerary = {};
+    // tslint:disable-next-line:forin
+    for (const key in this.itinerary) {
+      tempItinerary[key] = this.itinerary[key];
+    }
+    this.tourItinerary.push(tempItinerary);
+  }
 
   ngOnInit() {
   }

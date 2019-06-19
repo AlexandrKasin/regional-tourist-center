@@ -17,7 +17,13 @@ export class RegisterComponent implements OnInit {
     retypePassword: ''
   };
 
+  isRegister = false;
+
   constructor(private registerService: RegisterService) {
+  }
+
+  register() {
+    this.isRegister = true;
   }
 
   ngOnInit() {

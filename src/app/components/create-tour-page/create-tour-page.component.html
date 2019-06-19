@@ -20,9 +20,10 @@
       <div class="overview-container">
         <div class="mt-3">
           <div *ngIf="numberPage === 1">
-            <app-form-input class="w-100" label="Title"></app-form-input>
+            <app-form-input (changed)="onChangeTitle($event)" class="w-100" label="Title"></app-form-input>
             <label class="d-block form-label">Description</label>
-            <app-ngx-editor [placeholder]="'Describe tour here...'" [spellcheck]="true"
+            <app-ngx-editor (ngModelChange)="onChangeDescription($event)" [placeholder]="'Describe tour here...'"
+                            [spellcheck]="true"
                             [(ngModel)]="htmlContent"></app-ngx-editor>
           </div>
 

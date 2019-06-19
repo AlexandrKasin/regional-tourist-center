@@ -11,18 +11,10 @@ export class TourService {
   constructor(private http: HttpClient) {
   }
 
-  createTour() {
+  createTour(tourDto: any) {
     const tour = {
       amountDays: 10,
-      tourDescription: [{
-        title: 'Hello',
-        language: {languageName: 'english'}
-      },
-        {
-          title: 'Hesdgfdsfgllo',
-          language: {languageName: 'englishsdfg'}
-        }
-      ]
+      tourDescription: [tourDto.tourDescription]
     };
     const formData = objectToFormData(tour, {indices: true});
     this.http.post(SERVER + '/create/tour', formData).subscribe(a => {
